@@ -16,8 +16,9 @@ class CreateUsersTable extends Migration
             $table->increments('nik')->unique();
             $table->string('name');
             $table->string('email');
-            $table->string('password');
-            $table->integer('status',1);
+            $table->string('dept');
+            $table->string('password');                                         
+            $table->integer('status',1)->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
