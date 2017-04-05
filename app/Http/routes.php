@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/sales/MP', function () {
     return view('sales.MP');
 });
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
