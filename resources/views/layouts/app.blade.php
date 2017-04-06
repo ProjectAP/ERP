@@ -33,6 +33,11 @@ License: You must have a valid license purchased only from themeforest(the above
         <link href="{{ url('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ url('assets/plugins/bootstrap-switch/css/bootstrap-switch.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
+        
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        @yield('page-level-plugins')
+        <!-- END PAGE LEVEL PLUGINS -->
+
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="{{ url('assets/css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
         <link href="{{ url('assets/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
@@ -770,6 +775,9 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="{{ url('assets/scripts/app.min.js') }}" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        @yield('scripts-page-level')
+        <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="{{ url('assets/scripts/layout.min.js') }}" type="text/javascript"></script>
         {{-- <script src="{{ url('assets/scripts/demo.min.js') }}" type="text/javascript"></script> --}}
