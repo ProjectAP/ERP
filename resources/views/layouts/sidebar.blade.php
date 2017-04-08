@@ -49,14 +49,14 @@
                             <h3 class="uppercase">Sales</h3>
                         </li>
                         <li class="nav-item  ">
-                            <a href="ui_colors.html" class="nav-link ">
-                                <i class="icon-diamond"></i>
+                            <a href="{{ url('sales/MP') }}" class="nav-link ">
+                                <i class="icon-book-open"></i>
                                 <span class="title">Sales Contract</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="ui_colors.html" class="nav-link ">
-                                <i class="icon-diamond"></i>
+                            <a href="{{ url('sales/OP') }}" class="nav-link ">
+                                <i class="icon-action-redo"></i>
                                 <span class="title">Order Production</span>
                             </a>
                         </li>
