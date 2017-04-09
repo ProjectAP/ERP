@@ -29,6 +29,15 @@ class CreateMasterTable extends Migration
             $table->integer('curr'); // price currency
             $table->string('color'); // price color
         });
+
+        // tbl_delivery created because delivery from sc is multiple
+        Schema::create('tbl_delivery', function (Blueprint $table) {
+            $table->string('no_sc'); // connect to tbl sc with no_sc / no contract
+            $table->date('date_delivery'); // price
+            $table->integer('qty_delivery'); // price currency
+//            $table->integer('unit'); // price currency
+        });
+
         Schema::create('tbl_payment', function (Blueprint $table) {
             $table->increments('id'); // if of payment method autoincrement
             $table->string('name'); // payment method name
