@@ -78,6 +78,7 @@ class CreateMasterTable extends Migration
         Schema::drop('tbl_buyer');
         Schema::drop('tbl_curr');
         Schema::drop('tbl_price');
+        Schema::drop('tbl_delivery');
         Schema::drop('tbl_unit');
         Schema::drop('tbl_payment');
         Schema::drop('tbl_group_sales');
