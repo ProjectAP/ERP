@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOpTable extends Migration
+class CreateOPTable extends Migration
 {
     /**
      * Run the migrations.
