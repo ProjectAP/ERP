@@ -11,9 +11,23 @@
 |
 */
 
+/*if(DB::connection()->getDatabaseName())
+   {
+     echo "conncted sucessfully to database ".DB::connection()->getDatabaseName();
+   }*/
 Route::get('/', function () {
-    return view('welcome');
+/*
+		DB::table('no_sc_temp')->insert(array(                      
+			  array('no_sc' => '2017/202/E'),
+			  array('no_sc' => '2017/201/L'),
+			  array('no_sc' => '2017/203/E')
+			)); 
+
+		DB::table('no_sc_temp')->delete();*/
+
 });
+
+Route::get('/seeder/faker', 'SeederController@faker');
 
 Route::get('/sales/MP', function () {
     return view('sales.MP');
