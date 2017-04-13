@@ -12,5 +12,6 @@ class SCSeeder extends Seeder
     public function run()
     {
         //
+        
     }
 }
