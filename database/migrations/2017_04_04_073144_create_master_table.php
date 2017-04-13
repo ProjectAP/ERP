@@ -75,6 +75,13 @@ class CreateMasterTable extends Migration
             $table->string('nik'); // group sales nik if auto add group
             $table->string('description'); // group sales description
         });
+
+         // FIX SEEDER DATA
+        Schema::create('tbl_term', function (Blueprint $table) {
+            $table->increments('id'); // id term
+            $table->string('name'); // name term
+            $table->string('description'); // detail term
+        });
     }
 
     /**
@@ -92,5 +99,6 @@ class CreateMasterTable extends Migration
         Schema::drop('tbl_payment');
         Schema::drop('tbl_group_sales');
         Schema::drop('tbl_finish_type');
+        Schema::drop('tbl_term');
     }
 }
