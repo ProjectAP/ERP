@@ -12,6 +12,7 @@ class CreateMasterTable extends Migration
      */
     public function up()
     {
+        // FAKER SEEDER DATA
         Schema::create('tbl_buyer', function (Blueprint $table) {
             $table->increments('id'); // if of buyer autoincrement
             $table->string('name'); // buyer name
@@ -38,27 +39,35 @@ class CreateMasterTable extends Migration
 //            $table->integer('unit'); // price currency
         });
 
+        // FIX SEEDER DATA
         Schema::create('tbl_payment', function (Blueprint $table) {
             $table->increments('id'); // if of payment method autoincrement
             $table->string('name'); // payment method name
             $table->string('description'); // payment method description
         });
+
+        // FIX SEEDER DATA
         Schema::create('tbl_finish_type', function (Blueprint $table) {
             $table->string('code'); // if of Finish type autoincrement
             $table->string('name'); // Finish type name
             $table->string('description'); // Finish type description
         });
+
+        // FIX SEEDER DATA
         Schema::create('tbl_unit', function (Blueprint $table) {
             $table->increments('id'); // if of unit qty autoincrement
             $table->string('name'); // unit qty name
             $table->string('description'); // unit qty description
         });
+        
+        // FIX SEEDER DATA
         Schema::create('tbl_curr', function (Blueprint $table) {
             $table->increments('id'); // if of currency autoincrement
             $table->string('name'); // currency name
             $table->string('description'); // currency description
         });
 
+        // FIX SEEDER DATA
         // group sales auto by nik or manual to choice
         Schema::create('tbl_group_sales', function (Blueprint $table) {
             $table->string('code'); // code group sales
