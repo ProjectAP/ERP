@@ -12,7 +12,7 @@ class SeederController extends Controller
 {
     public function faker() {
     	$faker = Faker::create('id_ID');
-    	
+
     	$status = array('L','E');
     	$dash = array('_', '.');
 
@@ -25,15 +25,15 @@ class SeederController extends Controller
         echo "<br>";
         // Faker SC_temp
         foreach (range(1,10) as $index) {
-	        echo '2017/'.$faker->numberBetween($min = 3000, $max = 4000).'/'. $faker->randomElement($status).'<br>';
+	        echo '2017/'.$faker->unique()->numberBetween($min = 3000, $max = 4000).'/'. $faker->randomElement($status).'<br>';
         }
          echo "<br>";
         // Faker Users
         foreach (range(1,10) as $index) {
-        	$nik = '0010'.str_pad($faker->numberBetween($min = 0, $max = 20), 2, '0', STR_PAD_LEFT);
+        	$nik = '010'.str_pad($faker->unique()->numberBetween($min = 0, $max = 20), 2, '0', STR_PAD_LEFT);
         	$firstName = $faker->firstName;
         	$email = $firstName.$faker->randomElement($dash).$faker->lastName.'@argopantes.com';
-	        echo $nik.' '.$firstName.' '.strtolower($email).' sales secret'.'<br>';
+	        echo $nik.' '.$firstName.' '.strtolower($email).' sales '.bcrypt('secret').'<br>';
         }
     }
 }
