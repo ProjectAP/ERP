@@ -17,13 +17,13 @@ class CreateItemTable extends Migration
             $table->string('type');
             $table->string('weave');
             $table->string('tp_lusi');
-            $table->string('no_lusi');
+            $table->integer('no_lusi');
             $table->string('tp_pakan');
-            $table->string('no_pakan');
-            $table->string('cotton');
-            $table->string('poly');
-            $table->string('dst_lusi');
-            $table->string('dst_pakan');
+            $table->integer('no_pakan');
+            $table->integer('cotton');
+            $table->integer('poly');
+            $table->integer('dst_lusi');
+            $table->integer('dst_pakan');
             $table->string('l_greige');
             $table->string('dst_lusi_1');
             $table->string('dst_pakan_1');
@@ -44,7 +44,7 @@ class CreateItemTable extends Migration
             $table->string('name');
             $table->string('description');
         });
-        Schema::create('tbl_item_weave', function (Blueprint $table) {
+        Schema::create('tbl_weave_type', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('description');
@@ -60,6 +60,6 @@ class CreateItemTable extends Migration
     {
         Schema::drop('tbl_item');
         Schema::drop('tbl_item_type');
-        Schema::drop('tbl_item_weave');
+        Schema::drop('tbl_weave_type');
     }
 }
