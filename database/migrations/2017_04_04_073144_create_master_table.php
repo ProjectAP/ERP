@@ -85,16 +85,16 @@ class CreateMasterTable extends Migration
 
         // FIX SEEDER DATA
         Schema::create('tbl_fabric_type', function (Blueprint $table) {
-            $table->increments('id'); // id term
-            $table->string('name'); // name term
-            $table->string('description'); // detail term
+            $table->increments('id'); // id fabric
+            $table->string('name'); // name fabric
+            $table->string('description'); // detail fabric
         });
 
         // FIX SEEDER DATA
         Schema::create('tbl_yarn_type', function (Blueprint $table) {
-            $table->increments('id'); // id term
-            $table->string('name'); // name term
-            $table->string('description'); // detail term
+            $table->increments('id'); // id yarn
+            $table->string('name'); // name yarn
+            $table->string('description'); // detail yarn
         });
 
     }

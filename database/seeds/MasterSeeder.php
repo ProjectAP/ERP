@@ -24,21 +24,21 @@ class MasterSeeder extends Seeder
         );
         DB::table('tbl_fabric_type')->insert($fabric_type);
 
-        $item_type = array(
-            array(
-                'name' => 'TC',
-                'description' => 'TC Item'
-            ),
-            array(
-                'name' => 'CT',
-                'description' => 'CT Item'
-            ),
-            array(
-                'name' => 'Other',
-                'description' => 'Other Item'
-            )
-        );
-        DB::table('tbl_item_type')->insert($item_type);
+        // $item_type = array(
+        //     array(
+        //         'name' => 'TC',
+        //         'description' => 'TC Item'
+        //     ),
+        //     array(
+        //         'name' => 'CT',
+        //         'description' => 'CT Item'
+        //     ),
+        //     array(
+        //         'name' => 'Other',
+        //         'description' => 'Other Item'
+        //     )
+        // );
+        // DB::table('tbl_item_type')->insert($item_type);
 
         $yarn_type = array(
             array(
