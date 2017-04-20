@@ -35,7 +35,7 @@ class ItemSeeder extends Seeder
         foreach ($no_item as $item) {
        		DB::table('tbl_item')->insert(array(
        			'code' => $item,
-				'type' => $faker->randomElement($type),
+				'type_code' => $faker->randomElement($type),
 				'type_item' => $faker->randomElement($type_item).$item,
 				'weave' => $faker->randomElement($weave),
 				'tp_lusi' => $faker->randomElement($yarn),
@@ -44,14 +44,15 @@ class ItemSeeder extends Seeder
 				'no_pakan' => $faker->randomElement($no),
 				'cotton' => $faker->randomElement($no),
 				'poly' => $faker->randomElement($no),
-				'dst_lusi' => $faker->randomElement($dst),
-				'dst_pakan' => $faker->randomElement($dst),
+				'dst_lusi_f' => $faker->randomElement($dst),
+				'dst_pakan_f' => $faker->randomElement($dst),
 				'l_greige' => $faker->randomElement($l_greige),
-				'dst_lusi_1' => $faker->randomElement($dst),
-				'dst_pakan_1' => $faker->randomElement($dst),
+				'dst_lusi_s' => $faker->randomElement($dst),
+				'dst_pakan_s' => $faker->randomElement($dst),
 				'l_finish' => $faker->randomElement($l_finish),
 				'gram' => $faker->randomElement($gram),
-				'oz' => $faker->randomElement($oz)
+				'oz' => $faker->randomElement($oz),
+				'fabric_type' => $faker->randomElement($type)
        		));
 
        }

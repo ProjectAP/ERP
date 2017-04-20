@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
+{{-- BEGIN Style --}}
 @section('style-page-level-plugins')
     <link href="{{ url('assets/plugins/datatables/datatables.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ url('assets/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
 @endsection
+{{-- END Style --}}
+
+{{-- BEGIN Script --}}
 @section('scripts-page-level-plugins')
     <script src="../assets/global/scripts/datatable.js" type="text/javascript"></script>
     <script src="../assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
@@ -13,6 +17,7 @@
     <script src="{{ url('assets/scripts/table-datatables-responsive.min.js') }}" type="text/javascript"></script>
     {{-- <script src="{{ url('assets/scripts/form-samples.min.js') }}" type="text/javascript"></script> --}}
 @endsection
+{{-- END Script --}}
 
 {{-- Begin Page Content --}}
 @section('page-title')
