@@ -256,7 +256,7 @@
 	                                <td>{{ $d['oz'] }}</td>
 	                                <td>
 	                                	<div class="btn-group">
-                                            <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"> Actions
+                                            <button class="btn btn-sm green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true"> Actions
                                                 <i class="fa fa-angle-down"></i>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
