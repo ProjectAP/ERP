@@ -37,7 +37,7 @@
 @endsection
 @section('page-content')
 	{{-- {{ var_dump($data) }} --}}
-	<div class="row margin-bottom-20">
+	<div class="row">
 		<div class="col-md-12">
 			<div class="btn-group">
                 <button id="btn-add-data" class="btn sbold green"> Add New
