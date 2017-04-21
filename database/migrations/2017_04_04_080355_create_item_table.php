@@ -23,10 +23,10 @@ class CreateItemTable extends Migration
             $table->string('no_pakan');
             $table->string('cotton');
             $table->string('poly');
+            $table->string('dst_lusi_g');
+            $table->string('dst_pakan_g');
             $table->string('dst_lusi_f');
             $table->string('dst_pakan_f');
-            $table->string('dst_lusi_s');
-            $table->string('dst_pakan_s');
             $table->string('l_greige');
             $table->string('l_finish');
             $table->string('gram');

@@ -86,8 +86,7 @@
                                 <input type="text" id="no_item" class="form-control" placeholder="No. Item">
                             </div>
                         </div>
-                        <!--/span-->
-                        
+                        <!--/span-->    
                         <!--/span-->
                         <div class="col-md-3">
                             <div class="form-group">
@@ -215,7 +214,7 @@
             <!-- END FORM-->
 		</div>
 	</div>
-	<div class="row" id="table-data">
+	<div class="row margin-top-10" id="table-data">
         <div class="col-md-12">
             <!-- BEGIN EXAMPLE TABLE PORTLET-->
             <div class="portlet light bordered">

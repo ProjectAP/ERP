@@ -15,11 +15,11 @@ class PPCController extends Controller
     public function items(){
     	$faker = Faker::create('id_ID');
 
-   		// Faker Item
+    	// Faker Item
     	$fabric = array(1,2);
     	$type = array(1,2,3);
     	$yarn = array('TC','CVC');
-    	$weave = array(1,2,3);
+    	$weave = array('PLAIN','PLAT','TWILL 2/1');
 
     	$type_item = array('TC','CT','C');
 
@@ -32,57 +32,19 @@ class PPCController extends Controller
 
   		$no_item = [1110,1114,1118,1123,1134,1136,2101,2115,2126,2128,4103,4104,4108,41101,41102,41104,41105];
 
-
-  		$data = array();
-
-
-  		// DB::table('tbl_item')->delete();
-       	foreach ($no_item as $item) {
-       		$data['data'][] = array(
-       			$item, 
-       			$faker->randomElement($type_item).$item,
-       			$faker->randomElement($weave),
-       			$faker->randomElement($dst).' X '.$faker->randomElement($dst).' / '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' X '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' / '.$faker->randomElement($l_greige),
-       			$faker->randomElement($dst).' X '.$faker->randomElement($dst).' / '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' X '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' / '.$faker->randomElement($l_finish),
-    //    			$faker->randomElement($yarn),
-    //    			$faker->randomElement($no),
-				// $faker->randomElement($yarn),
-				// $faker->randomElement($no),
-				// $faker->randomElement($no),
-				// $faker->randomElement($no),
-				// $faker->randomElement($dst),
-				// $faker->randomElement($dst),
-				// $faker->randomElement($l_greige),
-				// $faker->randomElement($dst),
-				// $faker->randomElement($dst),
-				// $faker->randomElement($l_finish),
-				$faker->randomElement($gram),
-				$faker->randomElement($oz)
-       			);
-
-       		/*DB::table('tbl_item')->insert(array(
-       			'code' => $item,
-				'type' => $faker->randomElement($type),
-				'type_item' => $faker->randomElement($type_item).$item,
-				'weave' => $faker->randomElement($weave),
-				'tp_lusi' => $faker->randomElement($yarn),
-				'no_lusi' => $faker->randomElement($no),
-				'tp_pakan' => $faker->randomElement($yarn),
-				'no_pakan' => $faker->randomElement($no),
-				'cotton' => $faker->randomElement($no),
-				'poly' => $faker->randomElement($no),
-				'dst_lusi' => $faker->randomElement($dst),
-				'dst_pakan' => $faker->randomElement($dst),
-				'l_greige' => $faker->randomElement($l_greige),
-				'dst_lusi_1' => $faker->randomElement($dst),
-				'dst_pakan_1' => $faker->randomElement($dst),
-				'l_finish' => $faker->randomElement($l_finish),
+    	foreach ($no_item as $item) {
+       		$data[] = array(
+       			'item' => $item, 
+       			'type_item' => $faker->randomElement($type_item).$item,
+       			'weave' => $faker->randomElement($weave),
+       			'construct_g' => $faker->randomElement($dst).' x '.$faker->randomElement($dst).' / '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' x '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' / '.str_replace('/', ' - ', $faker->randomElement($l_greige)),
+       			'construct_f' => $faker->randomElement($dst).' x '.$faker->randomElement($dst).' / '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' x '.$faker->randomElement($yarn).' '.$faker->randomElement($no).' / '.str_replace('/', ' - ', $faker->randomElement($l_finish)),
+       			'cotton' => $faker->randomElement($no),
+       			'poly' => $faker->randomElement($no),
 				'gram' => $faker->randomElement($gram),
 				'oz' => $faker->randomElement($oz)
-       		));*/
-
-       }
-
-    	return response()->json($data,200,[],JSON_UNESCAPED_UNICODE);
+       			);
+       	}
+    	return view('ppc.items')->with('data', $data);
     }
 }
