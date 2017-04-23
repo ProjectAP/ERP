@@ -83,20 +83,6 @@ class CreateMasterTable extends Migration
             $table->string('description'); // detail term
         });
 
-        // FIX SEEDER DATA
-        Schema::create('tbl_fabric_type', function (Blueprint $table) {
-            $table->increments('id'); // id term
-            $table->string('name'); // name term
-            $table->string('description'); // detail term
-        });
-
-        // FIX SEEDER DATA
-        Schema::create('tbl_yarn_type', function (Blueprint $table) {
-            $table->increments('id'); // id term
-            $table->string('name'); // name term
-            $table->string('description'); // detail term
-        });
-
     }
 
     /**
@@ -115,7 +101,5 @@ class CreateMasterTable extends Migration
         Schema::drop('tbl_group_sales');
         Schema::drop('tbl_finish_type');
         Schema::drop('tbl_term');
-        Schema::drop('tbl_fabric_type');
-        Schema::drop('tbl_yarn_type');
     }
 }
